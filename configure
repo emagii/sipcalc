@@ -595,7 +595,6 @@ PACKAGE_STRING='sipcalc 1.1.7'
 PACKAGE_BUGREPORT='simon@routemeister.net'
 PACKAGE_URL='http://www.routemeister.net/projects/sipcalc/'
 
-ac_default_prefix=/usr
 # Factoring default headers for most tests.
 ac_includes_default="\
 #include <stdio.h>
@@ -2332,7 +2331,7 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
 ac_config_headers="$ac_config_headers config.h"
 
 
-
+# AC_PREFIX_DEFAULT(/usr)
 
 ac_aux_dir=
 for ac_dir in "$srcdir" "$srcdir/.." "$srcdir/../.."; do
