@@ -4,5 +4,6 @@ autom4te.cache
 *.o
 stamp-h1
 patches
-sipcalc
+*.patch
 
+sipcalc
