@@ -1,8 +1,5 @@
 AUTOMAKE_OPTIONS = subdir-objects
 
-# EXTRA_DIST = configure
-# EXTRA_DIST = doc/sipcalc.txt doc/sipcalc.1 doc/install.txt
-
 ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS} -I m4
 
 AM_CPPFLAGS = $(DEPS_CFLAGS)
