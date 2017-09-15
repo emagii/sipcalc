@@ -5,7 +5,7 @@ AC_INIT([sipcalc], [1.1.7], [simon@routemeister.net],
 AC_PREREQ([2.59])
 AM_CONFIG_HEADER(config.h)
 
-AC_PREFIX_DEFAULT(/usr)
+# AC_PREFIX_DEFAULT(/usr)
 
 AC_PROG_LIBTOOL
 AC_CONFIG_MACRO_DIR([m4])
