@@ -84,7 +84,7 @@ free_if (struct if_info *if_cur)
 struct if_info *
 get_if_ext ()
 {
-	int sd, size, prev_size, len, ifreq_sum;
+	int sd, size, prev_size, len;
 	struct ifreq *ifr, ifr_stat;
 	struct ifconf ifc;
 	char *buf, *ptr;
@@ -123,7 +123,6 @@ get_if_ext ()
 	if_start = NULL;
 	ptr = buf;
 	len = 0;
-	ifreq_sum = 0;
 	while (ptr < buf + ifc.ifc_len) {
 		if (!if_start) {
 			if_cur = if_start =

@@ -666,9 +666,9 @@ parse_abox (struct argbox *abox, struct if_info *if_start)
 int
 main (int argc, char *argv[])
 {
-	int x, y, z, m, v4args, v6args, iffound, argcount, first_err;
+	int x, y, z, m, v4args, v6args, iffound, argcount;
 	struct if_info *if_start, *if_cur;
-	struct if_info *ifarg_start, *ifarg_cur, *ifarg_old;
+	struct if_info *ifarg_start, *ifarg_cur;
 	int ch, parse_stdin, index;
 	struct misc_args m_argv4, m_argv6;
 	int split_errv4, split_errv6;
@@ -714,9 +714,7 @@ main (int argc, char *argv[])
 	m_argv6.numnets = 0;
 	split_errv4 = 0;
 	split_errv6 = 0;
-	first_err = 1;
 	ifarg_start = NULL;
-	ifarg_old = NULL;
 	resolve = 0;
 
 	/*

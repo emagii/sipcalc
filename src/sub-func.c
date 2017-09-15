@@ -298,8 +298,8 @@ getsplitnumv6 (char *buf, struct sip_in6_addr *splitmask, int *v6splitnum)
 		return -1;
 	*v6splitnum = y;
 	x = v6masktonum (buf, &y, splitmask);
-
-	return 0;
+	x = 0;
+	return x;
 }
 
 int
@@ -872,6 +872,7 @@ v6addrtonum (struct ipv6_split spstr, struct v6addr *in6_addr, int type)
 			x++;
 		}
 		x++;
+		n = 0;	// Avoid warning for possibly unintialized variable
 		for (y = 0; y < 4; y++) {
 			if (y == 1) {
 				in6_addr->haddr.sip6_addr16[6] =
