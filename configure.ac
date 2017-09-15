@@ -5,6 +5,20 @@ AC_INIT([sipcalc], [1.1.7], [simon@routemeister.net],
 AC_PREREQ([2.59])
 AM_CONFIG_HEADER(config.h)
 
+AC_PREFIX_DEFAULT(/usr)
+
+AC_PROG_LIBTOOL
+
+AC_ARG_ENABLE(shared,
+[ --enable-shared=[yes/no] Enable use of shared libraries [default=yes]],,
+	enable_shared=yes)
+AC_SUBST(enable_shared)
+
+AC_ARG_ENABLE(static,
+[ --enable-static=[yes/no] Enable use of static libraries [default=yes]],,
+	enable_static=yes)
+AC_SUBST(enable_static)
+
 AC_PROG_CC
 AC_PROG_INSTALL
 
@@ -52,6 +66,8 @@ AC_ARG_WITH([libnsl-lib-path],
   [LIBNSL_LIBS="-L$withval -lnsl"],
   [LIBNSL_LIBS='-L/usr/local/include -lnsl '])
 AC_SUBST([LIBNSL_LIBS])
+
+# --with-libtool-sysroot, --disable-static
 
 AC_CHECK_FUNCS(socket strstr strtol strtoul gethostbyname gethostbyname2 inet_ntop getipnodebyaddr getaddrinfo)
 
