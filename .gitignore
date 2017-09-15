@@ -1,0 +1,8 @@
+*~
+autom4te.cache
+.deps
+*.o
+stamp-h1
+patches
+sipcalc
+
