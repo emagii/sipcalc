@@ -8,6 +8,7 @@ AM_CONFIG_HEADER(config.h)
 AC_PREFIX_DEFAULT(/usr)
 
 AC_PROG_LIBTOOL
+AC_CONFIG_MACRO_DIR([m4])
 
 AC_ARG_ENABLE(shared,
 [ --enable-shared=[yes/no] Enable use of shared libraries [default=yes]],,
@@ -141,8 +142,4 @@ AC_CHECK_MEMBER(struct sockaddr.sa_len,
 
 AC_SUBST([CFLAGS])
 
-AC_OUTPUT(Makefile			\
-	  doc/Makefile			\
-	  include/Makefile		\
-	  src/Makefile			\
-	 )
+AC_OUTPUT(Makefile)
